@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-// the dirty solution
+// the livecode solution
 
 const MOCK_DATA = [
   { id: 'g_01', player: 'Caleb Barnes', points: -104 },

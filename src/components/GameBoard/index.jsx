@@ -49,7 +49,7 @@ export const GameBoard = () => {
     const id = setTimeout(() => {
       console.log('search')
       setFilteredData(
-        data.filter((item) => item[0].toLowerCase().includes(searchInput)),
+        data.filter((item) => item[0].toLowerCase().includes(searchInput.toLowerCase())),
       )
     }, 300)
 

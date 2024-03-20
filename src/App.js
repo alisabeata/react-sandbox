@@ -7,18 +7,18 @@ import { DataProvider } from './context/DataContext'
 import { GameBoard } from './components/GameBoard'
 
 function App() {
-  return <GameBoard />
-  // return (
-  //   <DataProvider>
-  //     <CounterProvider>
-  //       <div className="App">
-  //         <Header />
-  //         <Content />
-  //         <Counter />
-  //       </div>
-  //     </CounterProvider>
-  //   </DataProvider>
-  // )
+  return (
+    <DataProvider>
+      <CounterProvider>
+        <div className="App">
+          <Header />
+          <Content />
+          <Counter />
+          <GameBoard />
+        </div>
+      </CounterProvider>
+    </DataProvider>
+  )
 }
 
 export default App
