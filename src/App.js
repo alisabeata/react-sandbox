@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import { Header } from './components/Header'
+import { Content } from './components/Content'
+import { Counter } from './components/Counter'
+import { CounterProvider } from './context/CounterContext'
+import { DataProvider } from './context/DataContext'
+import { GameBoard } from './components/GameBoard'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <GameBoard />
+  // return (
+  //   <DataProvider>
+  //     <CounterProvider>
+  //       <div className="App">
+  //         <Header />
+  //         <Content />
+  //         <Counter />
+  //       </div>
+  //     </CounterProvider>
+  //   </DataProvider>
+  // )
 }
 
-export default App;
+export default App
