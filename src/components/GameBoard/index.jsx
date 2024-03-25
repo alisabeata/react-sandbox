@@ -28,7 +28,7 @@ export const GameBoard = () => {
 
     for (const item of MOCK_DATA) {
       if (hashMap[item.player]) {
-        hashMap[item.player] = hashMap[item.player] + item.points
+        hashMap[item.player] += item.points
       } else {
         hashMap[item.player] = item.points
       }
@@ -47,9 +47,10 @@ export const GameBoard = () => {
   useEffect(() => {
     // debounce
     const id = setTimeout(() => {
-      console.log('search')
       setFilteredData(
-        data.filter((item) => item[0].toLowerCase().includes(searchInput.toLowerCase())),
+        data.filter((item) =>
+          item[0].toLowerCase().includes(searchInput.toLowerCase()),
+        ),
       )
     }, 300)
 
